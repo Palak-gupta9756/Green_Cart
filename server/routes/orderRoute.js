@@ -1,11 +1,12 @@
 import express from 'express';
 import authUser from '../middlewares/authUser.js';
-import { getAllOrder, getUserOrder, placedOrderCOD } from '../controllers/orderController.js';
+import { getAllOrder, getUserOrder, placedOrderCOD, placedOrderStripe } from '../controllers/orderController.js';
 import authSeller from '../middlewares/authSeller.js';
 
 const orderRouter=express.Router();
 
 orderRouter.post('/cod',authUser,placedOrderCOD);
+orderRouter.post('/stripe',authUser,placedOrderStripe);
 orderRouter.get('/user',authUser,getUserOrder);
 orderRouter.get('/seller',authSeller,getAllOrder);
 

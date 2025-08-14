@@ -1,5 +1,5 @@
 import cookieParser from "cookie-parser";
-import express from "express";
+import express, { application } from "express";
 import cors from "cors";
 import connectDB from "./configs/db.js"
 import 'dotenv/config'
@@ -10,6 +10,7 @@ import productRouter from "./routes/productRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import addressRouter from "./routes/addressRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import { stripeWebhooks } from "./controllers/orderController.js";
 
 
 const app = express();
@@ -19,6 +20,8 @@ await connectDB()
 await connectCloudinary()
 
 const allowedOrigins=['http://localhost:5173']
+
+app.post('/stripe',express.raw({type:'application/json'}),stripeWebhooks)
 
 //Middleware configuration 
 app.use(express.json());
