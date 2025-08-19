@@ -1,9 +1,9 @@
-🛒 GreenCart – Grocery Delivery App
+**🛒 GreenCart – Grocery Delivery App**
 
 GreenCart is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) based grocery delivery eCommerce web application.
 It allows users to browse groceries, add products to the cart, place orders, and get them delivered at their doorstep.
 
-🚀 Features
+**🚀 Features**
 
 👤 User Authentication (Signup/Login with JWT & password encryption)
 
@@ -19,7 +19,7 @@ It allows users to browse groceries, add products to the cart, place orders, and
 
 📱 Responsive UI (works on desktop & mobile)
 
-🛠️ Tech Stack
+**🛠️ Tech Stack**
 
 Frontend: React.js, Redux / Context API, Tailwind CSS 
 
@@ -31,4 +31,4 @@ Authentication: JWT (JSON Web Token), bcrypt
 
 Other Tools: Git, Postman, Cloudinary (for images), Stripe (for payments)
 
-✨ Developed with ❤️ by Palak Gupta
+**✨ Developed with ❤️ by Palak Gupta**
